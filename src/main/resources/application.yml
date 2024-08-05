@@ -1,12 +1,16 @@
 server:
-  port: 8080
+  port: 9090
 
 spring:
   datasource:
-    url:  jdbc:mysql://localhost:3306/eduManage?createDatabaseIfNotExist=true
-    username: root
-    password: sh98@sh98
+    url:  jdbc:mysql://mysql-10e0ae6e-suhanmuhammedsulfikkar-5516.e.aivencloud.com:19645/eduManage?createDatabaseIfNotExist=true
+    username: avnadmin
+    password: AVNS_w1dveJzbKc9OmukEkht
     driver-class-name: com.mysql.jdbc.Driver
+
+  mvc:
+    path match:
+      matching-strategy: ANT_PATH_MATCHER
   jpa:
     hibernate:
       ddl-auto: update

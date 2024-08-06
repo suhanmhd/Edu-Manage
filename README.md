@@ -1,5 +1,5 @@
 # EduManage - Institute Management System
-EduManage is an Institute Management System built with Spring Boot (v3.3.2), MySQL for data storage, designed to manage institutes, including registration, modification, and retrieval of institute information. This application is secured using Spring Security and integrates with Docker for easy deployment.
+EduManage is an Institute Management System built with Spring Boot (v3.3.2), MySQL for data storage, designed to manage institutes, including registration, modification, and retrieval of institute information. This application is secured using Spring Security and integrates with Docker and automated builds with Jenkins CI/CD for easy deployment.
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -16,7 +16,7 @@ EduManage is an Institute Management System built with Spring Boot (v3.3.2), MyS
 
 ## Introduction
 
-EduManage is designed to streamline the management of institutes, allowing for the registration, modification, and retrieval of institute details. This application ensures data security and provides easy deployment with Docker.
+EduManage is designed to streamline the management of institutes, allowing for the registration, modification, and retrieval of institute details. This application ensures data security and provides easy deployment with Docker and automated builds with CI/CD.
 
 ## Features
 
@@ -80,7 +80,7 @@ EduManage is designed to streamline the management of institutes, allowing for t
 For detailed API documentation, please refer to the Swagger documentation linked below.
 
 ## Swagger Collection
-The API endpoints are documented using Swagger. You can access the Swagger UI at:
+The API endpoints are documented using Swagger ui. You can access the Swagger UI at:
 
 https://edu.mediconnects.online/swagger-ui/index.html
   

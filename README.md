@@ -54,9 +54,10 @@ EduManage is designed to streamline the management of institutes, allowing for t
 
 1. **Clone the repository**
 
-   ```bash
+   ```
   git clone https://github.com/suhanmhd/Edu-Manage.git
   cd Edu-Manage
+  
  ```
 
 2. **Configure the database**

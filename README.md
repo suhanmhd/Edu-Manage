@@ -69,19 +69,20 @@ EduManage is designed to streamline the management of institutes, allowing for t
 4. **Run the application**
 ```
   mvn spring-boot:run
-5. **Docker Configuration**
 `````
+5. **Docker Configuration**
+```
   docker build -t edu-manage .
  docker run -p 9090:9090 edu-manage
- ```
 ```
+
 ## API Endpoints
 For detailed API documentation, please refer to the Swagger documentation linked below.
 
 ## Swagger Collection
 The API endpoints are documented using Swagger. You can access the Swagger UI at:
 
-  http://localhost:9090/swagger-ui.html
+  http://localhost:9090/swagger-ui.html](https://edu.mediconnects.online/swagger-ui/index.html
   
 
 

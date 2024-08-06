@@ -80,7 +80,7 @@ EduManage is designed to streamline the management of institutes, allowing for t
 For detailed API documentation, please refer to the Swagger documentation linked below.
 
 ## Swagger Collection
-The API endpoints are documented using Swagger. You can access the Swagger UI at:
+The API endpoints are documented using Swagger ui. You can access the Swagger UI at:
 
 https://edu.mediconnects.online/swagger-ui/index.html
   

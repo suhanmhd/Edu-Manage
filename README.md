@@ -9,7 +9,7 @@ EduManage is an Institute Management System built with Spring Boot (v3.3.2), MyS
 - [Configuration](#Installation)
 - [Database Schema](#Installation)
 - [API Endpoints](#APIEndpoints)
-- [Postman Collection](#PostmanCollection)
+- [Swagger Collection](#PostmanCollection)
 - [Security](#security)
 - [Contributing](#contributing)
 - [License](#license)

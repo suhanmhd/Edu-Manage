@@ -53,7 +53,7 @@ public class InstituteController {
         return new ResponseEntity<>(institute, HttpStatus.OK);
     }
 
-    @GetMapping
+    @GetMapping("/getAll")
     public ResponseEntity<List<InstituteResponseDTO>> getAllInstitutes() {
         logger.info("Controller: Received request to retrieve all institutes");
         List<InstituteResponseDTO> institutes = instituteService.getAllInstitutes();
@@ -62,7 +62,7 @@ public class InstituteController {
     }
 
     @PreAuthorize("hasAuthority('ADMIN')")
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deleteInstitute(@PathVariable UUID id) {
         logger.info("Controller: Received request to delete institute with id: {}", id);
         instituteService.deleteInstitute(id);

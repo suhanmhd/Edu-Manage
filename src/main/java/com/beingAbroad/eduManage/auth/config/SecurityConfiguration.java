@@ -44,10 +44,11 @@ public class SecurityConfiguration {
                         .authenticated())
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .authenticationProvider(authenticationProvider)
+//                .authenticationProvider(authenticationProvider)
                 .authenticationProvider(authenticationProvider)
                 .exceptionHandling(customizer -> customizer
                         .authenticationEntryPoint(customAuthenticationEntryPoint))
+
                 .addFilterBefore(authFilterService, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();

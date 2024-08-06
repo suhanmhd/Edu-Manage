@@ -1,4 +1,4 @@
-package com.beingAbroad.eduManage.controller;
+package com.beingAbroad.eduManage.auth.controller;
 
 
 import com.beingAbroad.eduManage.auth.entities.RefreshToken;

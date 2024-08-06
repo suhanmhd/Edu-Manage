@@ -82,7 +82,7 @@ For detailed API documentation, please refer to the Swagger documentation linked
 ## Swagger Collection
 The API endpoints are documented using Swagger. You can access the Swagger UI at:
 
-  http://localhost:9090/swagger-ui.html](https://edu.mediconnects.online/swagger-ui/index.html
+https://edu.mediconnects.online/swagger-ui/index.html
   
 
 

@@ -94,7 +94,7 @@ class InstituteControllerTest {
 
         when(instituteService.updateInstitute(any(UUID.class), any(InstituteRequestDTO.class))).thenReturn(instituteResponseDTOOne);
 
-        this.mockMvc.perform(put("/api/v1/institute/{id}", instituteResponseDTOOne.getId())
+        this.mockMvc.perform(put("/api/v1/institute/update/{id}", instituteResponseDTOOne.getId())
                         .with(SecurityMockMvcRequestPostProcessors.csrf())
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(requestJson))
@@ -115,7 +115,7 @@ class InstituteControllerTest {
     void getAllInstitutes() throws Exception {
         when(instituteService.getAllInstitutes()).thenReturn(instituteList);
 
-        this.mockMvc.perform(get("/api/v1/institute/getAll"))
+        this.mockMvc.perform(get("/api/v1/institute/all"))
                 .andDo(print())
                 .andExpect(status().isOk());
     }

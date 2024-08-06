@@ -35,6 +35,10 @@ public class InstituteController {
         logger.info("Controller: Successfully registered institute: {}", savedInstitute.getName());
         return new ResponseEntity<>(savedInstitute, HttpStatus.CREATED);
     }
+    @GetMapping
+    public  ResponseEntity<String>sampleApi(){
+        return  new ResponseEntity<>("welcome to edu mange",HttpStatus.OK);
+    }
 
     @PreAuthorize("hasAuthority('ADMIN')")
     @PutMapping("/update/{id}")
@@ -43,11 +47,6 @@ public class InstituteController {
         InstituteResponseDTO updatedInstitute = instituteService.updateInstitute(id, instituteRequestDTO);
         logger.info("Controller: Successfully updated institute with id: {}", updatedInstitute.getId());
         return new ResponseEntity<>(updatedInstitute, HttpStatus.OK);
-    }
-    @GetMapping
-    public  ResponseEntity<String> sampleApi(){
-        String message = "welcome to edu manage";
-        return  new ResponseEntity<>(message,HttpStatus.OK);
     }
 
     @GetMapping("/{id}")

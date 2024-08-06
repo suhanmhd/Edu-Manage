@@ -37,12 +37,17 @@ public class InstituteController {
     }
 
     @PreAuthorize("hasAuthority('ADMIN')")
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public ResponseEntity<InstituteResponseDTO> updateInstitute(@PathVariable UUID id, @Valid @RequestBody InstituteRequestDTO instituteRequestDTO) {
         logger.info("Controller: Received request to update institute with id: {}", id);
         InstituteResponseDTO updatedInstitute = instituteService.updateInstitute(id, instituteRequestDTO);
         logger.info("Controller: Successfully updated institute with id: {}", updatedInstitute.getId());
         return new ResponseEntity<>(updatedInstitute, HttpStatus.OK);
+    }
+    @GetMapping
+    public  ResponseEntity<String> sampleApi(){
+        String message = "welcome to edu manage";
+        return  new ResponseEntity<>(message,HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
@@ -53,7 +58,7 @@ public class InstituteController {
         return new ResponseEntity<>(institute, HttpStatus.OK);
     }
 
-    @GetMapping("/getAll")
+    @GetMapping("/all")
     public ResponseEntity<List<InstituteResponseDTO>> getAllInstitutes() {
         logger.info("Controller: Received request to retrieve all institutes");
         List<InstituteResponseDTO> institutes = instituteService.getAllInstitutes();

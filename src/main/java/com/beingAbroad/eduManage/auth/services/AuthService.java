@@ -31,24 +31,6 @@ public class AuthService {
     private final AuthenticationManager authenticationManager;
     private static final Logger logger = LoggerFactory.getLogger(InstituteServiceImpl.class);
 
-//    public AuthResponse register(RegisterRequest registerRequest) {
-//        User user = User.builder()
-//                .name(registerRequest.getName())
-//                .email(registerRequest.getEmail())
-//                .username(registerRequest.getUsername())
-//                .password(passwordEncoder.encode(registerRequest.getPassword()))
-//                .role(UserRole.USER)
-//                .build();
-//
-//        User savedUser = userRepository.save(user);
-////        var accessToken = jwtService.generateToken(savedUser);
-////        RefreshToken refreshToken = refreshTokenService.createRefreshToken(savedUser.getEmail());
-////
-////        return AuthResponse.builder()
-////                .accessToken(accessToken)
-////                .refreshToken(refreshToken.getRefreshToken())
-////                .build();
-//    }
 
     public RegisterResponse register(RegisterRequest registerRequest) {
         logger.info("Registering new user with email: {}", registerRequest.getEmail());

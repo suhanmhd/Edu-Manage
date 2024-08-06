@@ -55,17 +55,15 @@ EduManage is designed to streamline the management of institutes, allowing for t
 1. **Clone the repository**
 
    ```
-  git clone https://github.com/suhanmhd/Edu-Manage.git
-  cd Edu-Manage
-  
- ```
+   git clone https://github.com/suhanmhd/Edu-Manage.git
+  ```
 
 2. **Configure the database**
     Edit src/main/resources/application.properties to configure your MySQL database.
    
 3. **Build the project**
-    ``` mvn clean install
-   ```
+    mvn clean install
+   `
 4. **Run the application**
      mvn spring-boot:run
 

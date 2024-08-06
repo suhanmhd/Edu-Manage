@@ -1,77 +1,88 @@
+# EduManage - Institute Management System
+EduManage is an Institute Management System built with Spring Boot (v3.3.2), MySQL for data storage, designed to manage institutes, including registration, modification, and retrieval of institute information. This application is secured using Spring Security and integrates with Docker for easy deployment.
+## Table of Contents
 
-]
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#TechnologiesUsed)
+- [Getting Started](#getting-started)
+- [Configuration](#Installation)
+- [Database Schema](#Installation)
+- [API Endpoints](#APIEndpoints)
+- [Postman Collection](#PostmanCollection)
+- [Security](#security)
+- [Contributing](#contributing)
+- [License](#license)
 
-EduManage - Institute Management System
-This is an Institute Management application built with Spring Boot (v3.3.0), MySQL for data storage, and Spring Security integrated with JWT authentication and role-based authorization.
+## Introduction
 
-Table of Contents
-Introduction
-Features
-Technologies Used
-Getting Started
-Configuration
-Database Schema
-API Endpoints
-Swagger Documentation
-Security
-Contributing
-License
-Introduction
-EduManage is designed to manage institutes, including registration, modification, and retrieval of institute information. The application requires JWT tokens for authentication and is secured with Spring Security.
+EduManage is designed to streamline the management of institutes, allowing for the registration, modification, and retrieval of institute details. This application ensures data security and provides easy deployment with Docker.
 
-Features
-Institute Management:
-Register new institutes
-Modify existing institute information
-Retrieve institute details by ID
-List all institutes
-Technologies Used
-Spring Boot 3.3.0: Framework for building Java applications.
-Spring Security: Provides authentication and authorization.
-JWT Authentication: Secure token-based authentication mechanism.
-MySQL: Relational database management system.
-JPA/Hibernate: Java Persistence API for ORM (Object-Relational Mapping).
-Maven: Build and dependency management tool.
-Docker: Containerization platform.
-Jenkins: CI/CD tool for automated deployment.
-AWS: Cloud hosting platform.
-Getting Started
-Prerequisites
-Java 17 or higher: Install Java Development Kit (JDK) from Oracle's official website.
-Maven: Download from official Maven website or install via your package manager.
-MySQL: Download and install from official MySQL website.
-Docker: Install from official Docker website.
-Jenkins: Set up Jenkins from official Jenkins website.
-AWS Account: Sign up at AWS.
-Installation
-Clone the repository
+## Features
 
-bash
-Copy code
-git clone https://github.com/suhanmhd/Edu-Manage.git
-cd Edu-Manage
-Configure the database
+- **Admin**:
+  - Add new Institutes
+  - Modify existing institute information
+  - Delete an Institute
+  - Login
 
-Edit src/main/resources/application.properties to configure your MySQL database.
+- **User**:
+  - List all Institute
+  - Retrieve institute details by ID
+  - Login
 
-Build the project
+## Technologies Used
 
-bash
-Copy code
-mvn clean install
-Run the application
+- **Spring Boot 3.3.2**: Framework for building Java applications.
+- **Spring Security**: Provides authentication and authorization.
+- **JWT Authentication**: Secure token-based authentication mechanism.
+- **MySQL**: Relational database management system.
+- **JPA/Hibernate**: Java Persistence API for ORM (Object-Relational Mapping).
+- **Docker**:  Containerization platform.
+- **Maven**: Build and dependency management tool.
 
-bash
-Copy code
-mvn spring-boot:run
-Configuration
-Database Configuration
-Edit the application.properties file to configure your MySQL database connection:
+## Getting Started
 
-properties
-Copy code
-spring.datasource.url=jdbc:mysql://localhost:3306/edu_manage
-spring.datasource.username=yourusername
-spring.datasource.password=yourpassword
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
+### Prerequisites
+
+- **Java 17 or higher**: Install Java Development Kit (JDK) from [Oracle's official website](https://www.oracle.com/java/technologies/javase-jdk17-downloads.html).
+- **Maven**: Download from [official Maven website](https://maven.apache.org/download.cgi) or install via your package manager.
+- **MySQL**: Download and install from [official MySQL website](https://dev.mysql.com/downloads/).
+- **Docker**: Containerization platform.
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+  git clone https://github.com/suhanmhd/Edu-Manage.git
+  cd Edu-Manage
+ 
+
+2. **Configure the database**
+    Edit src/main/resources/application.properties to configure your MySQL database.
+   
+3. **Build the project**
+     mvn clean install
+   
+4. **Run the application**
+     mvn spring-boot:run
+
+5. **Docker Configuration**
+    docker build -t edu-manage .
+    docker run -p 9090:9090 edu-manage
+     
+
+## API Endpoints
+For detailed API documentation, please refer to the Swagger documentation linked below.
+
+## Postman Collection
+The API endpoints are documented using Swagger. You can access the Swagger UI at:
+
+  http://localhost:9090/swagger-ui.html
+  
+
+
+
+
+    

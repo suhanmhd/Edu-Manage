@@ -55,9 +55,9 @@ EduManage is designed to streamline the management of institutes, allowing for t
 1. **Clone the repository**
 
    ```
-   git clone https://github.com/suhanmhd/Edu-Manage.git
+    git clone https://github.com/suhanmhd/Edu-Manage.git
    
-  ``
+  
 
 2. **Configure the database**
     Edit src/main/resources/application.properties to configure your MySQL database.
@@ -65,17 +65,16 @@ EduManage is designed to streamline the management of institutes, allowing for t
 3. **Build the project**
    ```
    mvn clean install
- ``
+ 
 4. **Run the application**
 ```
-     mvn spring-boot:run
-```
+  mvn spring-boot:run
 5. **Docker Configuration**
-6. ```
-    docker build -t edu-manage .
-    docker run -p 9090:9090 edu-manage
-   ```  
-
+`````
+  docker build -t edu-manage .
+ docker run -p 9090:9090 edu-manage
+ ```
+```
 ## API Endpoints
 For detailed API documentation, please refer to the Swagger documentation linked below.
 

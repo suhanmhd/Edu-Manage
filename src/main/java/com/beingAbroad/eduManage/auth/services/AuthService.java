@@ -8,6 +8,7 @@ import com.beingAbroad.eduManage.auth.utils.AuthResponse;
 import com.beingAbroad.eduManage.auth.utils.LoginRequest;
 import com.beingAbroad.eduManage.auth.utils.RegisterRequest;
 import com.beingAbroad.eduManage.auth.utils.RegisterResponse;
+import com.beingAbroad.eduManage.exception.BadCredentialException;
 import com.beingAbroad.eduManage.exception.UserAlreadyExistsException;
 import com.beingAbroad.eduManage.service.impl.InstituteServiceImpl;
 import lombok.RequiredArgsConstructor;
@@ -85,7 +86,7 @@ public class AuthService {
             );
         } catch (BadCredentialsException e) {
             logger.error("Authentication failed for email: {}", loginRequest.getEmail());
-            throw new BadCredentialsException("Invalid email or password.");
+            throw new BadCredentialException("Invalid email or password.");
         }
 
         User user = userRepository.findByEmail(loginRequest.getEmail())

@@ -45,6 +45,18 @@ public class GlobalExceptionHandler {
                 ZonedDateTime.now()
         );
     }
+    @ResponseStatus(HttpStatus.UNAUTHORIZED)
+    @ExceptionHandler(BadCredentialException.class)
+    public ApiErrorResponse handleBadCredentialException(BadCredentialException ex, HttpServletRequest request, HandlerMethod method) {
+        return new ApiErrorResponse(
+                HttpStatus.UNAUTHORIZED,
+                ex.getMessage(),
+                request.getRequestURI(),
+                method.getMethod().getName(),
+                ZonedDateTime.now()
+        );
+    }
+
 
     @ResponseStatus(HttpStatus.CONFLICT)
     @ExceptionHandler(value = EmailAlreadyExistsException.class)
